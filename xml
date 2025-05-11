@@ -1,0 +1,14 @@
+<decoder name="custom-threat-intel-xml" type="xml">
+  <prematch>threat</prematch>
+  <!-- Automatically match fields based on the XML element names -->
+  <xml_fields>
+    <field name="timestamp"/>
+    <field name="log_type"/>
+    <field name="indicator_type"/>
+    <field name="indicator"/>
+    <field name="description"/>
+    <field name="threat_level"/>
+    <field name="source"/>
+    <field name="mitre_attack"/>
+  </xml_fields>
+</decoder>
