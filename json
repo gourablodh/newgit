@@ -1,0 +1,16 @@
+<decoders>
+
+    <!-- 1. JSON decoder -->
+    <decoder name="threat-intel-json" type="json">
+      <prematch>threat[_-]?int</prematch>
+      <json_fields>
+        <field name="timestamp"/>
+        <field name="log_type"/>
+        <field name="indicator_type"/>
+        <field name="indicator"/>
+        <field name="description"/>
+        <field name="threat_level"/>
+        <field name="source"/>
+        <field name="mitre_attack"/>
+      </json_fields>
+    </decoder>
