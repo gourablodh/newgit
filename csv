@@ -1,0 +1,15 @@
+<decoder name="custom-threat-intel-csv" type="csv">
+      <!-- match only your CSV lines -->
+      <prematch>threat</prematch>
+      <csv_fields>
+        <!-- index is 1-based column position -->
+        <field name="timestamp"     index="1"/>
+        <field name="log_type"      index="2"/>
+        <field name="indicator_type"index="3"/>
+        <field name="indicator"     index="4"/>
+        <field name="description"   index="5"/>
+        <field name="threat_level"  index="6"/>
+        <field name="source"        index="7"/>
+        <field name="mitre_attack"  index="8"/>
+      </csv_fields>
+    </decoder>
