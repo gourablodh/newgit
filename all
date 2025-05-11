@@ -1,0 +1,50 @@
+<decoders>
+
+  <!-- JSON Decoder -->
+  <decoder name="threat-intel-json" type="json">
+    <prematch>threat</prematch>
+    <json_fields>
+      <field name="timestamp"/>
+      <field name="log_type"/>
+      <field name="indicator_type"/>
+      <field name="indicator"/>
+      <field name="description"/>
+      <field name="threat_level"/>
+      <field name="source"/>
+      <field name="mitre_attack"/>
+    </json_fields>
+  </decoder>
+
+  <!-- CSV Decoder -->
+  <decoder name="custom-threat-intel-csv" type="csv">
+    <prematch>threat</prematch>
+    <csv_fields>
+      <!-- index is 1-based column position -->
+      <field name="timestamp"     index="1"/>
+      <field name="log_type"      index="2"/>
+      <field name="indicator_type" index="3"/>
+      <field name="indicator"     index="4"/>
+      <field name="description"   index="5"/>
+      <field name="threat_level"  index="6"/>
+      <field name="source"        index="7"/>
+      <field name="mitre_attack"  index="8"/>
+    </csv_fields>
+  </decoder>
+
+  <!-- XML Decoder -->
+  <decoder name="custom-threat-intel-xml" type="xml">
+    <prematch>threat</prematch>
+    <!-- If you want to match tags automatically, simply list the elements without specifying a path -->
+    <xml_fields>
+      <field name="timestamp"/>
+      <field name="log_type"/>
+      <field name="indicator_type"/>
+      <field name="indicator"/>
+      <field name="description"/>
+      <field name="threat_level"/>
+      <field name="source"/>
+      <field name="mitre_attack"/>
+    </xml_fields>
+  </decoder>
+
+</decoders>
